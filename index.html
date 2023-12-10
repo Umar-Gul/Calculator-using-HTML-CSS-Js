@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
+
 <body>
     <div class="calculator">
         <input type="text" placeholder="0" id="inputbox">
@@ -32,13 +34,13 @@
             <button>2</button>
             <button>3</button>
             <button class="col1">+</button>
-            
+
         </div>
         <div>
             <button class="zero">0</button>
             <button>.</button>
             <button class="col1">=</button>
-            
+
         </div>
     </div>
 
@@ -50,26 +52,26 @@
         let arr = Array.from(button);
         arr.forEach(button => {
             button.addEventListener(`click`, (e) => {
-                if(e.target.innerHTML == `=`){
+                if (e.target.innerHTML == `=`) {
                     string = eval(string)
                     input.value = string;
                 }
-                // else if (e.target.innerHTML == `AC`){
-                //     string = "";
-                //     input.value = string;
-                // }
-                // else if (e.target.innerHTML == `DEL`){
-                //     string = string.substring(0, string.length-1)
-                //     input.value = string;
+                else if (e.target.innerHTML == `AC`) {
+                    string = "";
+                    input.value = string;
+                }
+                else if (e.target.innerHTML == `DEL`) {
+                    string = string.substring(0, string.length - 1)
+                    input.value = string;
 
-                // }
-                else{
+                }
+                else {
 
                     string += e.target.innerHTML;
                     input.value = string;
                 }
             })
-            
+
         });
     </script>
 
@@ -80,4 +82,5 @@
 
 
 </body>
+
 </html>
